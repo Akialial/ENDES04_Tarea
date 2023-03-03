@@ -15,18 +15,24 @@ public class Main {
         System.out.println("El saldo actual es" + saldoActual);
     }
 
-    public static void probarIngresar(CCuenta c, int cantidad) throws Exception {
+    public static void probarIngresar(CCuenta c, int cantidad, int cantidadEsperada) throws Exception {
         try {
             c.ingresar(cantidad);
+            if (c.getSaldo() != cantidadEsperada) {
+                throw new Exception("Error: La cantidad ingresada no es la esperada.");
+            }
         } catch (Exception e) {
             System.err.println("Ha ocurrido una excepción: " + e.getMessage());
             throw e;
         }
     }
 
-    public static void probarRetirar(CCuenta c, int cantidad) throws Exception {
+    public static void probarRetirar(CCuenta c, int cantidad, int cantidadEsperada) throws Exception {
         try {
             c.retirar(cantidad);
+            if (c.getSaldo() != cantidadEsperada) {
+                throw new Exception("Error: La cantidad retirada no es la esperada.");
+            }
         } catch (Exception e) {
             System.err.println("Ha ocurrido una excepción: " + e.getMessage());
             throw e;
