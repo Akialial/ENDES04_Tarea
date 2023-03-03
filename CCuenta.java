@@ -35,12 +35,14 @@ public class CCuenta {
      * negativa.
      */
     private final String ERRORCANTIDADNEGATIVA = "No se puede ingresar una cantidad negativa";
+
     /**
      *
      * Constructor vacío.
      */
     public CCuenta() {
     }
+
     /**
      *
      * Constructor que inicializa los atributos de la cuenta.
@@ -55,6 +57,7 @@ public class CCuenta {
         cuenta = cue;
         saldo = sal;
     }
+
     /**
      *
      * Devuelve el saldo actual de la cuenta.
@@ -64,6 +67,7 @@ public class CCuenta {
     public double estado() {
         return this.saldo;
     }
+
     /**
      *
      * Ingresa una cantidad en la cuenta.
@@ -78,6 +82,7 @@ public class CCuenta {
         }
         saldo = saldo + cantidad;
     }
+
     /**
      *
      * Retira una cantidad de la cuenta.
@@ -95,6 +100,7 @@ public class CCuenta {
         }
         saldo = saldo - cantidad;
     }
+
     /**
      *
      * Devuelve el nombre de la persona titular de la cuenta.
@@ -104,6 +110,7 @@ public class CCuenta {
     public String getNombre() {
         return nombre;
     }
+
     /**
      *
      * Establece el nombre de la persona titular de la cuenta.
@@ -113,6 +120,7 @@ public class CCuenta {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     /**
      *
      * Devuelve los caracteres que conforman la cuenta.
@@ -122,6 +130,7 @@ public class CCuenta {
     public String getCuenta() {
         return cuenta;
     }
+
     /**
      *
      * Establece los caracteres que conforman la cuenta.
@@ -131,6 +140,7 @@ public class CCuenta {
     public void setCuenta(String cuenta) {
         this.cuenta = cuenta;
     }
+
     /**
      *
      * Devuelve el saldo de la cuenta.
@@ -140,6 +150,7 @@ public class CCuenta {
     public double getSaldo() {
         return saldo;
     }
+
     /**
      *
      * Establece el saldo.
@@ -149,6 +160,7 @@ public class CCuenta {
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
+
     /**
      *
      * Devuelve el tipo de interés de la cuenta.
@@ -167,7 +179,13 @@ public class CCuenta {
     public void setTipoInterés(double tipoInterés) {
         this.tipoInterés = tipoInterés;
     }
-
+    /**
+     *
+     * Método que devuelve el mensaje de error si la cantidad es negativa.
+     *
+     * @return El mensaje de error cuando se intenta realizar una operación con
+     * una cantidad negativa.
+     */
     public String getERRORCANTIDADNEGATIVA() {
         return ERRORCANTIDADNEGATIVA;
     }
