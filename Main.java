@@ -3,26 +3,19 @@
  * and open the template in the editor.
  */
 package entidadFinanciera;
-
 /**
- *
+ * 
+ * Clase que contiene el método main para ejecutar el programa.
  * @author Alicia
- *
  * @version v1.0 marzo_2023
  */
-/**
- *
- * Clase que contiene el método main para ejecutar el programa.
- */
 public class Main {
-
     /**
-     *
+     * 
      * Punto de entrada del programa. Crea una instancia de CCuenta, la utiliza
      * para obtener el estado actual de la cuenta y lo imprime por pantalla.
      *
-     * @param args los argumentos de línea de comandos (no se utilizan en este
-     * método)
+     * @param args parámetros del Main.
      */
     public static void main(String[] args) {
         CCuenta objetoCuenta;
